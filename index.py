@@ -32,6 +32,7 @@ class LoginHandler(RequestHandler):
             self.json_args = json.loads(self.request.body)
             user = self.json_args['user_name']
             sector = self.json_args['sector_id']
+            # couldn't implement the session logic
             Login(user, "first_session").add_or_update_user_in_sector(sector)
             self.set_status(200)
         except Exception as e:
