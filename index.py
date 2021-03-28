@@ -16,8 +16,8 @@ class SectorsHandler(RequestHandler):
             self.write(json.dumps(Sector.get_sectors()))
             self.set_status(200)
         except Exception as e:
-          print(e)
-          self.set_status(400)
+            print(e)
+            self.set_status(400)
 
 
 class LoginHandler(RequestHandler):
